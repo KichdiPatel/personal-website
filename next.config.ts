@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  outputFileTracingRoot: process.cwd(),
 };
 
-export default nextConfig;
+const withMDX = require("@next/mdx")();
+export default withMDX(nextConfig);
