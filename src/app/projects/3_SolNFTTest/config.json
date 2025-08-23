@@ -1,0 +1,6 @@
+{
+  "title": "Solana NFT Arbitrage Simulator",
+  "type": "Trading Strategy",
+  "description": "Scraped Solana NFT marketplaces to test if arbitrage opportunities exist.",
+  "url": "https://github.com/KichdiPatel/Sol-NFT-Arb-Simulator"
+}

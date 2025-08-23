@@ -1,0 +1,6 @@
+{
+  "title": "Whales Market Strategy",
+  "type": "Trading Strategy",
+  "description": "Alerts for first offer on new markets to snipe arbitrage between first offer and first order.",
+  "url": "https://github.com/KichdiPatel/Whales-Market-Pre-Snipe-Alert"
+}

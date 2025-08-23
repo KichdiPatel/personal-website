@@ -31,5 +31,7 @@ export default function ProjectTableWrapper() {
     }
   });
 
-  return <ProjectTable projects={projects} />;
+  const reversedProjects = projects.reverse();
+
+  return <ProjectTable projects={reversedProjects} />;
 }

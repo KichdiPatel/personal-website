@@ -17,8 +17,8 @@ export default function ProjectTable({ projects }: ProjectTableProps) {
       <table className="w-full [&_th]:py-2 [&_td]:py-2 [&_th]:text-gray-500 [&_th]:pr-8 [&_td]:pr-8">
         <thead>
           <tr className="border-b border-foreground">
-            <th className="text-left font-normal w-1/7">Title</th>
-            <th className="text-left font-normal w-1/9">Type</th>
+            <th className="text-left font-normal w-1/5">Title</th>
+            <th className="text-left font-normal w-1/7">Type</th>
             <th className="text-left font-normal">Description</th>
           </tr>
         </thead>

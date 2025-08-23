@@ -1,0 +1,6 @@
+{
+  "title": "eBay Profit Calculator",
+  "type": "CLI Tool",
+  "description": "Given a product title, scrapes eBay for average selling price and calculates profit.",
+  "url": "https://github.com/KichdiPatel/eBayProfitCalculator"
+}

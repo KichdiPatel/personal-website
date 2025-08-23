@@ -28,7 +28,7 @@ export default function Home() {
         
         <SocialLinks />
 
-        <h2 className="mt-16 font-normal text-left w-full text-gray-500 dark:text-gray-300">Projects:</h2>
+        <h2 className="mt-12 font-normal text-left w-full text-gray-500 dark:text-gray-300">Projects:</h2>
         
         <ProjectTableWrapper />
       </main>
