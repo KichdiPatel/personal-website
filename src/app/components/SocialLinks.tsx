@@ -10,7 +10,7 @@ export default function SocialLinks() {
           LinkedIn
         </a>
         
-        <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-black transition-colors font-medium">
+        <a href="https://x.com/KichdiPatel" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-black transition-colors font-medium">
           X
         </a>
       </div>

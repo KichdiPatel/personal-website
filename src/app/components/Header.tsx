@@ -7,7 +7,7 @@ export default function Header() {
 
   const handleCopyEmail = async () => {
     try {
-      await navigator.clipboard.writeText('your-email@example.com');
+      await navigator.clipboard.writeText('acpatel@bu.edu');
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 2000); // Reset after 2 seconds
     } catch (err) {

@@ -26,17 +26,17 @@ export default function ProjectTable({ projects }: ProjectTableProps) {
           {projects.map((project, index) => (
             <tr key={index} className="border-b border-foreground group">
               <td className="group-hover:text-blue-600 transition-colors">
-                <Link href={project.url} className="block w-full h-full">
+                <Link href={project.url} className="block w-full h-full" target="_blank" rel="noopener noreferrer">
                   {project.title}
                 </Link>
               </td>
               <td className="group-hover:text-blue-600 transition-colors">
-                <Link href={project.url} className="block w-full h-full">
+                <Link href={project.url} className="block w-full h-full" target="_blank" rel="noopener noreferrer">
                   {project.type}
                 </Link>
               </td>
               <td className="group-hover:text-blue-600 transition-colors">
-                <Link href={project.url} className="block w-full h-full">
+                <Link href={project.url} className="block w-full h-full" target="_blank" rel="noopener noreferrer">
                   {project.description}
                 </Link>
               </td>
