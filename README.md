@@ -1,6 +1,6 @@
 # Ayan Patel - Personal Website
 
-Link: https://personal-website-pink-three-26.vercel.app/
+Link: [ayanpatel.xyz](https://ayanpatel.xyz)
 
 ## Tech Stack
 
