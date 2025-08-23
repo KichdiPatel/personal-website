@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Header from "./components/Header";
 import SocialLinks from "./components/SocialLinks";
-import ProjectTable from "./components/ProjectTable";
+import ProjectTableWrapper from "./components/ProjectTableWrapper";
 
 export default function Home() {
   return (
@@ -30,7 +30,7 @@ export default function Home() {
 
         <h2 className="mt-16 font-normal text-left w-full text-gray-500 dark:text-gray-300">Projects:</h2>
         
-        <ProjectTable />
+        <ProjectTableWrapper />
       </main>
     </div>
   );

@@ -20,7 +20,7 @@ export default function Header() {
       <h1 className="font-semibold text-lg">Ayan Patel</h1>
       <button 
         onClick={handleCopyEmail}
-        className="border border-gray-100 dark:border-gray-600 rounded-full px-4 py-2 text-sm text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white hover:border-gray-200 dark:hover:border-gray-500 transition-colors font-medium relative overflow-hidden"
+        className="border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-500 hover:text-black hover:border-gray-200 transition-colors font-medium relative overflow-hidden"
       >
         <span 
           className={`transition-opacity duration-300 ${isCopied ? 'opacity-0' : 'opacity-100'}`}
