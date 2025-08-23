@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Header />
 
-      <main className="mt-24 flex flex-col items-center">
+      <main className="mt-12 flex flex-col items-center">
         <Image
           src="/man.gif"
           alt="Man GIF"
@@ -19,7 +19,7 @@ export default function Home() {
           unoptimized={true}
         />
 
-        <p className="mt-12 text-xl font-normal text-center max-w-3xl">
+        <p className="mt-8 text-xl font-normal text-center max-w-3xl">
           I am a CS student who loves <em>creating, coding,</em> and <em>expirementing</em>. I like testing crypto trading strategies (mostly private), working with data, and building business/lifestyle automation projects.
           <br />
           <br />
