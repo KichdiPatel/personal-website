@@ -20,7 +20,7 @@ export default function Home() {
         />
 
         <p className="mt-8 text-xl font-normal text-center max-w-3xl">
-          I am a CS student who loves <em>creating, coding,</em> and <em>expirementing</em>. I like testing crypto trading strategies (mostly private), working with data, and building business/lifestyle automation projects.
+          I am a CS student at Boston University who loves <em>creating, coding,</em> and <em>expirementing</em>. I like testing crypto trading strategies (mostly private), working with data, and building business/lifestyle automation projects.
           <br />
           <br />
            <span className="font-semibold">Currently</span>, testing trading strategies on prediction markets, and learning about building consumer products.
