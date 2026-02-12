@@ -1,0 +1,66 @@
+import Image from "next/image";
+import homePage from "./assets/home_page.png";
+import profilePage from "./assets/profile_page.png";
+import copytradePage from "./assets/copytrade_page.png";
+
+# Bravado Trading Terminal
+
+**Website:** [app.bravadotrade.com](https://app.bravadotrade.com)
+
+**X:** [x.com/bravadotrade](https://x.com/bravadotrade)
+
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="w-full h-auto rounded-lg border border-gray-200 mb-4"
+>
+  <source src="/projects/8_Bravado/trade_page.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+The main Polymarket site is clean and user friendly, but not made for Pro Traders.
+Thats where Bravado comes in. A clean UI, fast responseviness on trades, new ways to find tradeable markets, copytrading, and more.
+
+I built the backend infrastructure and many of the integrations for the V1 of the Bravado Trading Terminal.
+It was a great opportunity to gain experience building a real product that people used!
+At the time of writing this, Bravado has handled 45K+ in volume and 500+ connected wallets.
+
+<Image
+  src={profilePage}
+  alt="Bravado Trading Terminal homepage"
+  className="w-full h-auto rounded-lg border border-gray-200 mb-4"
+/>
+
+Some of the things I worked on:
+
+I developed the core API(fastify) and integrated with our main Postgres DB.
+There was a lot of cool things I built here like all of the polymarket trade functionality, auth, and an access-code system.
+I found it also to be very interesting to integrate Privy and specifically their session signers product so we could create embedded wallets for users and securely place server-side trades.
+
+A small but impactful service that I like was one I built to fill and keep updated all Polymarket Events/Markets data in our DB so we can give lots of customizability to the user for finding new markets to trade.
+
+<Image
+  src={homePage}
+  alt="Bravado Trading Terminal homepage"
+  className="w-full h-auto rounded-lg border border-gray-200 mb-4"
+/>
+
+<Image
+  src={copytradePage}
+  alt="Bravado Trading Terminal homepage"
+  className="w-full h-auto rounded-lg border border-gray-200 mb-4"
+/>
+
+Another feature I'm proud of is the copytrading engine.
+Copytrading is a strategy where users can have trades automatically placed for them based on some other profile they think is doing good.
+In building this, I was able to get to a point where the latency of the trades could be placed in the same block as the person you were following using Alchemy Websocket.
+However, this as a data source ended up being extremely expensive, and so we landed on using Quicknode RPC which was cheaper and still very fast.
+
+One thing I was really surprised by was developing Stop Loss orders.
+If you don't know, Stop Loss is an order you can place where you will automatically be sold out of your position if the price of what you are trading drops below your stop loss orders' price.
+This was really challenging because you have to maintain websocket connections to every market with an open stop loss order and constantly maintain if the trigger pice has been crossed to execute the stop loss orders.
+
+This was such a great experience to build, glad I was a part of it!
