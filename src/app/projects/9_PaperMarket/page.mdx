@@ -6,4 +6,4 @@ Basically, you create a paper trading account, change the API base URL in your P
 
 I built the API with FastAPI and Postgres. It handles accounts, API keys, orders, and trades, with endpoints shaped around Polymarket's CLOB API. I also built a separate fill engine that watches the order book for markets with open paper orders. When the best bid or ask crosses your price, it records a simulated trade.
 
-One thing I liked about this project was figuring out how close I could get to the workflow of a real trading API while keeping the simulated side understandable. It is still a prototype, and the fills are much simpler than actual trading. They do not account for things like your place in the order queue or slippage. But it was a fun way to build and test trading tools without every bug costing money!
+I really enjoyed the challenge of trying to recreate Polymarket's API. It wasn't just about matching the request and response schemas. Market orders, limit orders, and fills all needed to behave the way a Polymarket client expected. Building the fill engine was a lot of the work, but it was also the most interesting part for me.
