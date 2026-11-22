@@ -1,0 +1,9 @@
+# PaperMarket
+
+**Project:** A paper trading API and dashboard for Polymarket strategies.
+
+Trading bots are hard to test with real money: even a small order can be costly when a strategy, integration, or risk rule is wrong. I built PaperMarket to let traders and developers rehearse orders against live market prices before putting capital at risk. The goal was a familiar API so a Polymarket client could switch its host and test much of the same order workflow in paper mode.
+
+I built a FastAPI backend with account and API key management, order and trade endpoints shaped around Polymarket's CLOB API, and a separate fill engine. The engine subscribes to market order book updates only for assets with active orders and records paper fills when the best bid or ask crosses an order's limit price. A Next.js dashboard provides a UI for managing the experience.
+
+It was a useful exercise in designing an API compatible with another service and separating order intake from live market simulation. The project is an older prototype, not a live trading venue; its fill model is deliberately simplified and does not reproduce queue position or real execution slippage.
