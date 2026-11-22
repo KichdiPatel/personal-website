@@ -1,8 +1,8 @@
 # PaperMarket
 
-I kept wanting to test Polymarket trading ideas without risking real money every time I changed a bot. A backtest is useful, but I also wanted to see what would happen when a strategy actually placed orders against live markets. So I built PaperMarket.
+I kept wanting to test Polymarket trading ideas without risking real money every time I changed a bot. Backtests are helpful, but I really wanted to forward test without building custom paper trading logic into every bot. Polymarket had a staging API URL, but I couldn't get it to work. So I built PaperMarket.
 
-The idea was pretty simple. Give yourself a paper trading account, point a Polymarket client at a different API, and try out your strategy before trading for real. I also made a dashboard for people who just wanted to place paper trades through a UI.
+Basically, you create a paper trading account, change the API base URL in your Polymarket client to PaperMarket, and start forward testing with simulated funds. When you're ready to trade live, you switch the URL back to Polymarket. I also built a dashboard if you wanted to place paper trades through a UI.
 
 I built the API with FastAPI and Postgres. It handles accounts, API keys, orders, and trades, with endpoints shaped around Polymarket's CLOB API. I also built a separate fill engine that watches the order book for markets with open paper orders. When the best bid or ask crosses your price, it records a simulated trade.
 
