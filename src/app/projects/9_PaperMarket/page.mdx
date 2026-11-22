@@ -1,0 +1,25 @@
+import Image from "next/image";
+import landingPage from "./assets/landing-page.jpg";
+import tradeDashboard from "./assets/trade-dashboard.jpg";
+
+# Papermarket
+
+I kept wanting to test Polymarket trading ideas without risking real money every time I changed a bot. Backtests are helpful, but I really wanted to forward test without building custom paper trading logic into every bot. Polymarket had a staging API URL, but I saw in their Discord that it wasn't going to be functional for the public. So I built Papermarket.
+
+Basically, you create a paper trading account, change the API base URL in your Polymarket client to Papermarket, and start forward testing with simulated funds. When you're ready to trade live, you switch the URL back to Polymarket. I also built a dashboard if you wanted to place paper trades through a UI.
+
+<Image
+  src={landingPage}
+  alt="Papermarket landing page"
+  className="w-full h-auto rounded-lg border border-gray-200 mb-4"
+/>
+
+I built the API with FastAPI and Postgres. It handles accounts, API keys, orders, and trades, with endpoints shaped around Polymarket's CLOB API. I also built a separate fill engine that watches the order book for markets with open paper orders. When the best bid or ask crosses your price, it records a simulated trade.
+
+<Image
+  src={tradeDashboard}
+  alt="Papermarket trading dashboard with credentials removed"
+  className="w-full h-auto rounded-lg border border-gray-200 mb-4"
+/>
+
+I really enjoyed the challenge of trying to recreate Polymarket's API. Not only did the request and response schemas have to match Polymarket's endpoints, but so did the auth headers and the behavior of market orders, limit orders, cancellations, and more. Building out the fill engine and thinking through the different edge cases of how a trade might be processed was a ton of fun!
